@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="Scripts/angular.min.js"></script>
+<script src="app.js" charset="ISO-8859-9"></script>
+
+</head>
+
+<body>
+
+<div ng-app="myApp" , ng-controller="myCtrl">
+
+
+  <p>Arama : <input type="text" ng-model="test" />
+  <p>Sırala:</p>
+  <select ng-model="order">
+     <option value="ad">Ada göre</option>
+    <option value="yas">Yasa göre</option>
+  </select>
+
+  <ul>
+
+    <li ng-repeat="cust in customer | filter:test |orderBy:order">
+
+      {{cust.ad}} - {{cust.yas}}
+
+    </li>
+
+  </ul>
+
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>
